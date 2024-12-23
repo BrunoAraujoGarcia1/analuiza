@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Luiza, Ruivinha 🧡</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+        }
+        img {
+            max-width: 200px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #timer {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 400px;
+        }
+        .time-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            flex: 1 1 calc(25% - 10px);
+            min-width: 80px;
+        }
+        .time-box span {
+            display: block;
+            margin-top: 5px;
+            font-size: 0.8em;
+            font-weight: normal;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        #letter {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            text-align: justify;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        #letter h3 {
+            margin: 0;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <img src="ana.jpg" alt="Imagem no topo" id="top-image">
+    <h2>Ruivinha 🧡</h2>
+    <div id="timer">
+        <div class="time-box">
+            <div id="days">0</div>
+            <span>Dias</span>
+        </div>
+        <div class="time-box">
+            <div id="hours">0</div>
+            <span>Horas</span>
+        </div>
+        <div class="time-box">
+            <div id="minutes">0</div>
+            <span>Minutos</span>
+        </div>
+        <div class="time-box">
+            <div id="seconds">0</div>
+            <span>Segundos</span>
+        </div>
+    </div>
+
+    <script>
+        function updateTimer() {
+            const startDate = new Date('2024-09-01T00:00:00');
+            const now = new Date();
+            const elapsed = now - startDate;
+
+            const days = Math.floor(elapsed / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((elapsed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((elapsed % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((elapsed % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+
+    <div id="letter">
+        <h3>De Bruno, para Ana Luiza</h3>
+        <p>
+            Ana ou melhor (minha ruivinha), nesses últimos 4 meses jamais imaginei que uma mulher como você, linda, maravilhosa, inteligente, educada e acima de tudo companheira apareceria na minha vida de forma tão inesperada.
+        </p>
+        <p>
+            Sendo uma pessoa muito tímida, admito que ainda não soube expressar da devida forma o meu sentimento que criei por você. Por achar que não mereço ter você ao meu lado, não estou te tratando como uma verdadeira princesa da Disney como você é para mim.
+        </p>
+        <p>
+            Porém, quando você despertou um grande sentimento em mim, você mudou radicalmente o Bruno que tinha vergonha, preocupações e que me faltava-me ter atitudes. Nesse novo ciclo da minha vida graças a você estou vivendo um dos melhores anos da minha vida.
+        </p>
+        <p>
+            Saiba que, enquanto estivermos juntos estarei sempre aqui para apoiar os seus sonhos, pois, seus objetivos, sonhos, conquistas e felicidades agora também são partes de mim. Não desista, assim como a vida não é fácil e temos que ir à batalha todos os dias, sonhos não se vencem sem lutar (subir um degrau de cada vez). Voe, e tenha a tão sonhada vontade de ser a Sargenta Ana. Esse dia vai chegar, e você vai calar a boca de todo mundo que desacreditou de você.
+        </p>
+        <p>
+            Quero lhe dizer do fundo do meu coração que eu te amo, e vou ressaltar todos os dias o quão você é linda, especial e perfeita para mim. Você sempre terá o meu apoio e meu amor incondicionalmente. Te amo e te adoro, com muito amor.
+        </p>
+        <p>
+            Bruno.
+        </p>
+    </div>
+</body>
+<audio autoplay loop>
+    <source src="sua-musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+</audio>
+<style>
+    #letter {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px; /* Diminui o espaçamento interno */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 380px; /* Reduz a largura máxima */
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.6;
+}
+</style>
+</html>
